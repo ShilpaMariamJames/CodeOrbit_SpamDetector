@@ -1,22 +1,3 @@
-"""
-Task 6 - Mini Project: AI-Based Spam Detector (end-to-end app)
---------------------------------------------------------------
-How it works:
-1. DATA INPUT  : a small set of SMS messages labelled "spam" or "ham" (normal).
-2. MODEL       : TF-IDF turns each message into numbers (word importance).
-                 A Multinomial Naive Bayes model learns which words appear more
-                 in spam ("free", "win", "prize", "click") and which in normal
-                 messages ("meeting", "lunch", "tomorrow").
-3. PREDICTION  : for a new message it calculates the probability of spam.
-4. OUTPUT      : a simple web app (Gradio) where you type a message and see
-                 "SPAM" or "NOT SPAM" with the confidence.
-
-Install once:  pip install scikit-learn pandas gradio
-Run:           python task6_spam_app.py
-               -> opens a web page (link printed in the terminal).
-In Colab, the app appears directly below the cell.
-"""
-
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
